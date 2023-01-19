@@ -157,8 +157,9 @@
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./src/style.css -o ./docs/index.css  --minify",
+    "build": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --minify",
     "dev": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --watch",
+    "deploy": "git add . && git commit -am deploy && git push origin main",
     "test": "jest"
   },
   "repository": {

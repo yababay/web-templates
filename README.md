@@ -2,7 +2,7 @@
 
 ![./screenshot.png](Скриншот)
 
-[Посмотреть](https://yababay.github.io/yababay-web-template/).
+[Посмотреть](https://yababay.github.io/web-templates/).
 
 ## Как вести разработку
 
