@@ -1,0 +1,42 @@
+@import "./css/index.css"; 
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article.icons p, article.icons h1 {
+    text-align: center;
+}
+
+figure {
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    text-align: center;
+    height: var(--figcaption-height);
+    line-height: var(--figcaption-height);
+    font-size: smaller;
+    vertical-align: top;
+}
+
+@media (orientation: landscape) {
+    figure {
+        height: var(--figure-image-size-landscape);
+        width:  var(--figure-image-size-landscape);
+    }
+}
+
+@media (orientation: portrait) {
+    figure {
+        height: var(--figure-image-size-portrait);
+        width:  var(--figure-image-size-portrait);
+    }
+}

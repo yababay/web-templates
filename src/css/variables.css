@@ -1,0 +1,10 @@
+:root {
+    --header-height: 3rem;
+    --footer-height: 2rem;
+    --header-font-size: 1.2rem;
+    --footer-font-size: .875rem;
+    --main-min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    --figcaption-height: 2rem;
+    --figure-image-size-landscape: calc(var(--main-min-height) - var(--figcaption-height) - 2rem);  
+    --figure-image-size-portrait:  calc(100vw - 2rem);  
+}

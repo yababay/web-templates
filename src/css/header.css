@@ -1,0 +1,58 @@
+header {
+    @apply relative
+}
+
+header .brand, header ul li, header .links .burger {
+    height: var(--header-height);
+    line-height: var(--header-height);
+}
+
+header .brand {
+    @apply ml-3 absolute top-0 left-0 block text-left;
+    width: 50%;
+}
+
+header .brand .logo, header .links .burger {
+    @apply icon;
+    width: calc(var(--header-height) * .5);
+    height: calc(var(--header-height) * .45);
+}
+
+header .brand .logo {
+    background-image: url(img/logo.svg);
+}
+
+header .links .burger {
+    @apply mr-3 inline-block xs:hidden z-10;
+}
+
+header ul {
+    @apply 
+
+        xs:mr-3
+        xs:inline-block 
+        xs:z-30 
+
+        max-xs:absolute 
+        max-xs:right-0 
+        max-xs:w-64 
+        max-xs:border-2
+        max-xs:m-2
+        max-xs:p-2
+        max-xs:border-gray-300
+        max-xs:rounded-md
+        max-xs:text-left
+        max-xs:bg-white
+        max-xs:opacity-80
+        max-xs:z-0
+        max-xs:hidden
+}
+
+header ul li {
+    @apply 
+
+        inline-block 
+        ml-3
+        text-base
+        max-xs:block 
+}

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    main {
+        min-height: var(--main-min-height);
+        z-index: 10;
+    }
+
+    header {
+        height: var(--header-height);
+        line-height: var(--header-height);
+        font-size: var(--header-font-size);
+        text-align: right;
+    }
+
+    footer {
+        height: var(--footer-height);
+        line-height: var(--footer-height);
+        font-size: var(--footer-font-size);
+        @apply text-center
+    }   
+
+    article {
+        max-width: 80ch;
+        @apply
+            m-5
+            ml-auto
+            mr-auto
+            p-5
+            md:border-2
+            lg:border-gray-300 
+    }
+
+    article p {
+        @apply mt-2
+    }
+
+    article h1, article h2 {
+        @apply mt-3 mb-3
+    }
+
+    article h1 {
+        @apply text-3xl
+    }
+
+    article h2 {
+        @apply text-xl
+    }
+}
