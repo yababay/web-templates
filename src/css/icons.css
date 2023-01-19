@@ -5,6 +5,7 @@
 .bi.x-lg   { @icon bi x-lg }
 .bi.file-earmark-check { @icon bi file-earmark-check }
 .bi.one-two-three { @icon bi 123 }
+.bi.alt { @icon bi alt }
 
 /*
  * Uncomment required lines (move it up from commented block).
