@@ -4,14 +4,12 @@
 
 [Посмотреть](https://yababay.github.io/yababay-web-template/).
 
-## Установка
+## Как вести разработку
 
-```
-npx create-yababay-app <app-name>
-cd <app-name>
-npm i
-npm run dev
-```
+* выполните в терминале `npm run dev`. Запустится процесс обработки стилей утилитой tailwind;
+* запустите `live server` в среде `VS Code` или другой локальный сервер, обслуживающий каталог `docs`;
+* правьте стили в каталоге `./src`;
+* при необходимости правьте `./docs/index.html`.
 
 ## Структура проекта
 
@@ -22,8 +20,8 @@ npm run dev
 `Tailwind`. Назначение файлов:
 
 * `./src/css/variables.css`
-* `./src/css/tailwind-base.css` - слой тэгов;
-* `./src/css/tailwind-components.css` - слой компонентов;
+* `./src/css/tw-base.css` - слой тэгов;
+* `./src/css/tw-components.css` - слой компонентов;
 * `./src/css/icons.css` - иконки `Bootstrap`;
 * `./src/css/header.css` - оформление заголовка;
 * `./src/css/index.css` - результирующий файл (импорт всех вышеперечисленных).

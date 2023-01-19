@@ -1,20 +1,4 @@
-@layer components {
-   
-    .icon {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        vertical-align: text-top;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin: .1rem .3rem 0 0;
-        content: ''
-    }
-    
-    .bi {
-        @apply icon;
-    }
-    
+@layer base {
     .text-9xl .bi, .bi.xl9 {
         width: 8rem;
         height: 8rem;

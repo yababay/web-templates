@@ -3,7 +3,8 @@
  */
 
 @import "./variables.css";
-@import "./tailwind-base.css";
-@import "./tailwind-components.css";
+@import "./tw-base.css";
+@import "./tw-components.css";
+@import "./tw-utilites.css";
 @import "./header.css";
 @import "./icons.css";
