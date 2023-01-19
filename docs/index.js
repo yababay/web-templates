@@ -1,35 +1,33 @@
-const menu = document.querySelector('.links ul')
-const main = document.querySelector('main')
-const showMenuItem = document.querySelector('a[href="#menu-show"]')
-const hideMenuItem = document.querySelector('a[href="#menu-hide"]')
+const menu = document.querySelector('.links ul');
+const burger = document.querySelector('a[href="#menu-show"]');
 
-function toggleMenu(state = 'none') {
-    console.log(state)
-    menu.style.display = state
+function toggleMenu(display = 'inline-block'){
+    menu.style.display = display
 }
 
 (function(){ 
 
-    if(menu && showMenuItem && hideMenuItem){
-        showMenuItem.addEventListener('click', e => {
-            e.preventDefault()
-            toggleMenu('block')
-        })
+    if(!menu || !burger) return console.log('Не обнаружены меню или бургер.')
+    document.addEventListener("click", e => {
+        let target = e.target;      
+        do {
+            if (target == menu || target == burger) return;
+            target = target.parentNode;
+        } while (target);
+        toggleMenu('none')
+    });
 
-        hideMenuItem.addEventListener('click', e => {
-            e.preventDefault()
-            toggleMenu()
-        })
-
-        main.addEventListener('click', e => {
-            window.innerWidth < 420 && toggleMenu()
-        })
-
-        window.addEventListener('resize', e => {
-            toggleMenu(window.innerWidth > 420 ? 'inline-block' : 'none')
-        })
-
-        window.addEventListener('keyup', e => e.key == 'Escape' && toggleMenu())
+    function checkWindowWidth(){
+        toggleMenu(window.innerWidth > 420 ? 'inline-block' : 'none')
     }
-    else console.log('Please point menu and buttons.')
+
+    checkWindowWidth()
+
+    window.addEventListener('resize', e => {
+        checkWindowWidth()
+    })
+
+    window.addEventListener('keyup', e => e.key == 'Escape' && toggleMenu('none'))
+
+    burger.addEventListener('click', e => toggleMenu('block'))
 })()
