@@ -1,6 +1,6 @@
 {
   "name": "@yababay67/web-template-tw",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "description": "Шаблон для ванильных веб-приложений с Tailwind.",
   "main": "index.js",
@@ -16,6 +16,7 @@
     "dev": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --watch",
     "deploy": "npm run build && git add . && git commit -am deploy && git push origin main",
     "publish": "npm publish --access public",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
