@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('./src/lib/postcss-bootstrap-icons.cjs'),
+    require('@yababay67/postcss-plugin'),
     require('autoprefixer'),
     require('tailwindcss')
   ]

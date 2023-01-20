@@ -13,7 +13,6 @@
     "dev": "vite",
     "build": "vite build && rm -rf public/icons && mv dist/icons dist/assets",
     "preview": "vite preview",
-    "publish": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

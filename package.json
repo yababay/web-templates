@@ -8,6 +8,7 @@
     "@yababay67/web-template-vt": "./src/lib/setup.cjs"
   },
   "devDependencies": {
+    "@yababay67/postcss-plugin": "^0.0.1",
     "autoprefixer": "^10.4.13",
     "bootstrap-icons": "^1.10.3",
     "postcss": "^8.4.21",
@@ -27,9 +28,7 @@
   },
   "keywords": [
     "tailwind",
-    "pug",
-    "vue",
-    "svelte",
+    "vite",
     "css",
     "html",
     "js"
