@@ -15,6 +15,7 @@
     "build": "npm run build:img && npx tailwindcss -i ./src/style.css -o ./docs/index.css --minify",
     "dev": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --watch",
     "deploy": "npm run build && git add . && git commit -am deploy && git push origin main",
+    "publish": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
