@@ -19,7 +19,7 @@ header .brand .logo, header .links .burger {
 }
 
 header .brand .logo {
-    background-image: url(img/logo.svg);
+    background-image: url(logo.svg);
 }
 
 header .links .burger {

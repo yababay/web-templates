@@ -5,7 +5,7 @@ function toggleMenu(display = 'inline-block'){
     menu.style.display = display
 }
 
-(function(){ 
+export default function(){ 
 
     if(!menu || !burger) return console.log('Не обнаружены меню или бургер.')
     document.addEventListener("click", e => {
@@ -30,4 +30,4 @@ function toggleMenu(display = 'inline-block'){
     window.addEventListener('keyup', e => e.key == 'Escape' && toggleMenu('none'))
 
     burger.addEventListener('click', e => toggleMenu('block'))
-})()
+}

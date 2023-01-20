@@ -1,22 +1,24 @@
 {
-  "name": "@yababay67/web-template-tw",
-  "version": "0.0.11",
+  "name": "@yababay67/web-template-vt",
+  "version": "0.0.1",
   "type": "module",
-  "description": "Шаблон для ванильных веб-приложений с Tailwind.",
-  "main": "index.js",
+  "description": "Шаблон для ванильных веб-приложений с Tailwind, Vite и Bootstrap Icons.",
+  "main": "./src/lib/setup.js",
   "bin": {
-    "@yababay67/web-template-tw": "./index.cjs"
+    "@yababay67/web-template-vt": "./src/lib/setup.cjs"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.4"
+    "autoprefixer": "^10.4.13",
+    "bootstrap-icons": "^1.10.3",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.4"
   },
   "scripts": {
-    "build:img": "cp ./public/img docs -r",
-    "build": "npm run build:img && npx tailwindcss -i ./src/style.css -o ./docs/index.css --minify",
-    "dev": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --watch",
-    "deploy": "npm run build && git add . && git commit -am deploy && git push origin main",
+    "dev": "vite",
+    "build": "vite build && rm -rf public/icons && mv dist/icons dist/assets",
+    "preview": "vite preview",
     "publish": "npm publish --access public",
-    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
