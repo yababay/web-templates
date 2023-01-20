@@ -28,13 +28,16 @@ fs.rmSync(tmpDir, { recursive: true });
 const indexFile = path.join(projectDir, 'index.cjs');
 fs.unlinkSync(indexFile);
 
-console.log('\nSuccess! Your new project is ready.');
-console.log('Please execute in your terminal:\n');
+console.log('\nВаш новый проект готов к разработке!');
+console.log('Вам понадобится редактор VS Code с плагином Live Server.');
+console.log('Выполните в терминале команды:\n');
 console.log(`    cd ${projectName}`);
 console.log('    npm i');
-console.log('    npm run dev');
 console.log('    code .');
-console.log('\nThen run live-server in your VS Code');
-console.log('and develop in real time (see README.md).');
-console.log("\nDon't forget to edit your package.json!\n");
+console.log('\nВ VS Code откройте терминал и выполните:\n');
+console.log('    npm run dev');
+console.log('\nЗапустится процесс парсинга стилей в реальном времени.');
+console.log('Можно править файлы и сразу же видеть результат в браузере.');
+console.log('Подробности см. в README.md).');
+console.log("\nНе забудьте отредактировать ваш package.json!\n");
 

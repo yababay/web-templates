@@ -1,4 +1,4 @@
-@layer base {
+@layer utilities {
     .text-9xl .bi, .bi.xl9 {
         width: 8rem;
         height: 8rem;
