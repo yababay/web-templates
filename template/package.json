@@ -1,0 +1,15 @@
+{
+  "name": "your-app-name",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "build:img": "cp ./public/img docs",
+    "build": "npm run build:img && npx tailwindcss -i ./src/style.css -o ./docs/index.css --minify",
+    "dev": "npx tailwindcss -i ./src/style.css -o ./docs/index.css --watch",
+    "deploy": "npm run build && git add . && git commit -am deploy && git push origin main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
