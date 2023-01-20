@@ -28,12 +28,12 @@ fs.rmSync(tmpDir, { recursive: true });
 const indexFile = path.join(projectDir, 'index.cjs');
 fs.unlinkSync(indexFile);
 
-console.log('Success! Your new project is ready.');
+console.log('\nSuccess! Your new project is ready.');
 console.log('Please execute in your terminal:\n');
 console.log(`    cd ${projectName}`);
 console.log('    npm i');
 console.log('    npm run dev');
-console.log('Then run live-server in your VS Code');
+console.log('\nThen run live-server in your VS Code');
 console.log('and develop in real time (see README.md).');
-console.log("\nDon't forget to edit your package.json!");
+console.log("\nDon't forget to edit your package.json!\n");
 
