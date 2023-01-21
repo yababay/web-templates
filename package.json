@@ -20,7 +20,10 @@
   },
   "scripts": {
     "dev": "node ./src/lib/ssr",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
     "build": "vite build && rm -rf public/icons && mv dist/icons dist/assets",
+    "help": "vite build --help",
     "preview": "vite preview",
     "publish": "npm publish --access public",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
