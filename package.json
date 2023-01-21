@@ -1,5 +1,5 @@
 {
-  "name": "@yababay67/web-template-md",
+  "name": "@yababay67/web-template-pug",
   "version": "0.0.1",
   "type": "module",
   "description": "Шаблон для веб-приложений с генерацией страниц из pug- и markdown-файлов.",

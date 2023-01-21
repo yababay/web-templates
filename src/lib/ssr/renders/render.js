@@ -5,6 +5,10 @@ export default class Render {
         this._context = pageContext
     }
 
+    get html(){
+        return null
+    }
+
     get context(){
         return this._context
     }

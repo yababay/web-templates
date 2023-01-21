@@ -53,23 +53,6 @@ export function getRenderByUrl(url){
   return render
 }
 
-/*
-function getErrorPage(context = {}){
-  context = {...context, ...settings}
-  if(existsSync(publicErrorPage)) return publicErrorPage
-  const ext = Array.from(renders.keys()).find(key => existsSync(`${errorPage}.${key}`))
-  return renders.get(ext)(`${errorPage}.${key}`, context)
-}
-
-export function getRender(url){
-  let path = !(prefix && postfix) ? indexPage : `/${postfix}`
-  const ext = Array.from(renders.keys()).find(key => existsSync(`${path}.${key}`))
-  if(ext) return renders.get(ext)(`${path}.${key}`, settings)
-  if(!existsSync(path)) path = `${publicDir}/${prefix}` + (postfix && `/${postfix}` || '')  
-  else return mimeRender
-}
-*/
-
 function reply(res, content, status = 200, type = 'text/html'){
   return res.status(status).set({ 'Content-Type': `${type}` }).end(content)
 } 
@@ -107,7 +90,8 @@ export default (app, vite) => {
           const html = template.replace(`<!--ssr-outlet-->`, appHtml)
           */  
           // 6. Send the rendered HTML back.
-          reply(res, '<h1>Hello</h1>')
+          const render = getRenderByUrl(url)
+          reply(res, render.html)
           //res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
         } catch (e) {
           // If an error is caught, let Vite fix the stack trace so it maps back to
