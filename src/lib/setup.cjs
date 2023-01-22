@@ -12,7 +12,7 @@ const currentDir = process.cwd();
 const projectDir = path.resolve(currentDir, projectName);
 fs.mkdirSync(projectDir, { recursive: true });
 
-let tmpDir = path.resolve(__dirname, '');
+let tmpDir = path.resolve(__dirname, '../..');
 fs.cpSync(tmpDir, projectDir, { recursive: true });
 tmpDir = path.resolve(__dirname, 'template');
 fs.cpSync(tmpDir, projectDir, { recursive: true });

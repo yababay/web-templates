@@ -2,13 +2,16 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname,  'index.html'),
-        error: resolve(__dirname, 'icons.html'),
-        eula: resolve(__dirname, 'eula.html'),
-      },
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname,  'src/pages/index.pug'),
+            },
+        },
     },
-  },
+    resolve: {
+        alias: {
+            "#root": `${__dirname}/src`,
+        }
+    }
 })
